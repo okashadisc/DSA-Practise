@@ -11,7 +11,7 @@
  */
 class bstIterator{
     public:
-    bool reverse=false;
+    bool reverse=true;
     stack<TreeNode*>s;
     void pushAll(TreeNode* root)
     {
