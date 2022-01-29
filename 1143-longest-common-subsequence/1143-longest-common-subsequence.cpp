@@ -7,19 +7,19 @@ public:
         
         for(int k=0;k<=n;k++)
         {
-            dp[k][0]=0;
+            dp[0][k]=0;
         }
         
         for(int k=0;k<=m;k++)
         {
-            dp[0][k]=0;
+            dp[k][0]=0;
         }
         
-        for(int i=1;i<=n;i++)
+        for(int i=1;i<=m;i++)
         {
-            for(int j=1;j<=m;j++)
+            for(int j=1;j<=n;j++)
             {
-                if(text1[i-1]==text2[j-1])
+                if(text1[j-1]==text2[i-1])
                 {
                     dp[i][j]=1+dp[i-1][j-1];
                 }
@@ -29,7 +29,7 @@ public:
                 }
             }
         }
-        return dp[n][m];
+        return dp[m][n];
         
     }
 };
