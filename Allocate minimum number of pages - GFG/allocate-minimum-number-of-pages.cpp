@@ -19,14 +19,14 @@ class Solution
                 return false;
             }
             
-            if(sum+A[i]<=curr ){
-                sum+=A[i];
+            if(A[i]+sum > curr ){
+                student++;
+                sum = A[i];
             }
             else{
-                sum=0;
-                student++;
-                sum=A[i];
+                sum+=A[i];
             }
+            
             if(student>M){
                return false;
             }
