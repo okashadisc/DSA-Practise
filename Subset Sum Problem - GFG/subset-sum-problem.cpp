@@ -13,7 +13,25 @@ public:
         // code here 
         int n=N;
         bool dp[n+1][sum+1];
+	    dp[0][0]=true;
+	    for(int i=0;i<=n;i++)
+	    {
+	        for(int j=0;j<=sum;j++)
+	        {
+	            if(i==0 and j>0)dp[i][j]=false;
+	           else  if(j==0)dp[i][j]=true;
+	            else
+	            {
+	                dp[i][j]=dp[i-1][j] or (j-arr[i-1]>=0?dp[i-1][j-arr[i-1]]:false);
+	            }
+	        }
+	    }
+	    return dp[n][sum];
+        /*
+        int n=N;
+        bool dp[n+1][sum+1];
         dp[0][0]=true;
+        
         for(int i=0;i<=n;i++)
         {
             for(int j=0;j<=sum;j++)
@@ -28,6 +46,7 @@ public:
             }
         }
         return dp[n][sum];
+        */
     }
 };
 
