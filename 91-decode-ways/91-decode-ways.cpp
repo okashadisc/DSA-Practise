@@ -4,7 +4,7 @@ public:
         int n=s.length();
         if(n==0)return 0;
         if(s[0]=='0')return 0;
-        vector<int>dp(n+1,0);
+        vector<int>dp(n+1);
         dp[0]=1;
         dp[1]=1;
         
