@@ -3,17 +3,22 @@ public:
     vector<int> countBits(int n) {
         
        vector<int>ans;
-        for(int i=0;i<=n;i++)
+        int dp[n+1];
+        dp[0]=0;
+        ans.push_back(dp[0]);
+        for(int i=1;i<=n;i++)
         {
-        int  num=i;
-        int count=0;
-        while(num!= 0)
-        {
-            int possible=num & 1;
-            if(possible==1)count++;
-            num=num>>1;
-        }
-        ans.push_back(count);
+            int x=i;
+            if(x%2==0)
+            {
+                dp[x]=dp[x>>1];
+            }
+            else 
+            {
+                dp[x]=dp[x>>1]+1;
+            }
+            
+            ans.push_back(dp[i]);
         }
         return ans;
         
