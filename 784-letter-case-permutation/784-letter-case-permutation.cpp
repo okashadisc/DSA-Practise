@@ -12,21 +12,20 @@ public:
         if(!isdigit(s[indx]))
         {
             //2 choices--->uppercase or lowercase
-            string c1=out;
-            c1.push_back(tolower(s[indx]));
-            utility(indx+1,s,c1,ans);
             
-            string c2=out;
-            c2.push_back(toupper(s[indx]));
-            utility(indx+1,s,c2,ans);
-    
+            out.push_back(tolower(s[indx]));
+            utility(indx+1,s,out,ans);
+            out.pop_back();
+            out.push_back(toupper(s[indx]));
+            utility(indx+1,s,out,ans);
+            out.pop_back();
             
         }
         else
         {
-            string c=out;
-            c.push_back(s[indx]);
-            utility(indx+1,s,c,ans);
+            out.push_back(s[indx]);
+            utility(indx+1,s,out,ans);
+            out.pop_back();
         }
     }
     vector<string> letterCasePermutation(string s) {
