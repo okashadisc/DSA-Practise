@@ -11,8 +11,8 @@ public:
         int i=0;
         for(int j=1;j<n;j++)
         {
-            if(intervals[i][1]>intervals[j][0])count++;
-            else i=j;
+            if(intervals[i][1]<=intervals[j][0])i=j;
+            else count++;
         }
         return count;
         
