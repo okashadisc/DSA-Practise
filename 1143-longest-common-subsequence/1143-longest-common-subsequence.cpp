@@ -4,7 +4,9 @@ public:
         int n=text1.size();
         int m=text2.size();
         int dp[1000][1000];
-        
+        memset(dp,sizeof(dp),0);
+       
+        /*
         for(int k=0;k<=n;k++)
         {
             dp[0][k]=0;
@@ -14,6 +16,7 @@ public:
         {
             dp[k][0]=0;
         }
+        */
         
         for(int i=1;i<=m;i++)
         {
