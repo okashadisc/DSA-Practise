@@ -12,7 +12,6 @@ public:
                 if(dp[j]==true and (st.count(s.substr(j,i-j+1))))
                 {
                     dp[i+1]=true;
-                    break;
                 }
             }
         }
