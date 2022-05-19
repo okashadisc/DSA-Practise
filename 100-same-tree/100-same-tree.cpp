@@ -14,8 +14,7 @@ public:
     bool utility(TreeNode* p,TreeNode* q)
     {
         //base case
-        if(!p)return !q;
-        if(!q)return !p;
+        if(!p or !q)return p==q;
         //recursive case
         if(p->val==q->val and utility(p->left,q->left) and utility(p->right,q->right))return true;
         return false;
