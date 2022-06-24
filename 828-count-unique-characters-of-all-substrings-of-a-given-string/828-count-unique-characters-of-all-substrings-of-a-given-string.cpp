@@ -8,14 +8,14 @@ public:
         
         for(int i=0;i<n;i++){
             int c=s[i]-65;
-            res=res+(i-index[c][1])*(index[c][1]-index[c][0]);
+            res+=(i-index[c][1])*(index[c][1]-index[c][0]);
             index[c][0]=index[c][1];
             index[c][1]=i;
         }
         
         int i=n;
         for(int c=0;c<26;c++){
-            res=res+(i-index[c][1])*(index[c][1]-index[c][0]);
+            res+=(i-index[c][1])*(index[c][1]-index[c][0]);
         }
         
         return res;
