@@ -2,14 +2,14 @@ typedef pair<int,int>node;
 class Twitter {
 public:
     unordered_map<int,set<int>>followerMap;
-    unordered_map<int,vector<int>>tweetMap;
+//    unordered_map<int,vector<int>>tweetMap;
     vector<node>newsFeed;
     Twitter() {
         
     }
     
     void postTweet(int userId, int tweetId) {
-        tweetMap[userId].push_back(tweetId);
+      //  tweetMap[userId].push_back(tweetId);
         newsFeed.push_back({tweetId,userId});
     }
     
