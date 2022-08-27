@@ -18,7 +18,8 @@ public:
                 if(!characterStack.empty() and characterStack.top()=='('){
                     characterStack.pop();
                     indexStack.pop();
-                    maxLen=max(maxLen,i-indexStack.top());
+                    int problemIndex=indexStack.top();
+                    maxLen=max(maxLen,i-problemIndex);
                 }
                 else{
                     indexStack.push(i);
