@@ -11,7 +11,7 @@ public:
         //recursive case
         for(int j=i;j<=9;j++)
         {
-            if(target-j>=0 and k>0)
+            if(target-j>=0 and k)
             {
                 curr_ans.push_back(j);
                 utility(j+1,target-j,n,k-1,curr_ans,ans);
