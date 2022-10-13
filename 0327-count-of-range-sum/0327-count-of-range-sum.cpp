@@ -7,8 +7,10 @@ struct segmentTree{
     void updateRangeSum(int start,int end,int si,int index){
         //base case
         if(start==end){
+            if(index==start){
             st[si]=0;
             return;
+            }
         }
         //recursive case
         
@@ -91,7 +93,7 @@ public:
             uMap[v[i].second]=i;
         }
         
-        segmentTree sgTree=segmentTree(u);
+        segmentTree sgTree(u);
         
         long long int Lower=lower;
         long long int Upper=upper;
