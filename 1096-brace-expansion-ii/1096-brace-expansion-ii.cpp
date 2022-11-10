@@ -3,15 +3,6 @@ public:
     vector<string>parse(string input){
         vector<string>subRes;
         
-//         int left=0;
-//         for(int i=0;i<input.length();i++){
-//             if(input[i]==','){
-//                 string temp=input.substr(left,i-left);
-//                 left=i+1;
-//                 subRes.push_back(temp);
-//             }
-//         }
-        
         stringstream ss(input);
         string temp;
         
@@ -55,13 +46,13 @@ public:
             }
         }
         
-        vector<string>finalRes(res.begin(),res.end());
+        vector<string>finalRes;
         
-        // while(!res.empty()){
-        //     finalRes.push_back(*res.begin());
-        //     auto address=res.find(*res.begin());
-        //     if(address != res.end())res.erase(address);
-        // }
+        while(!res.empty()){
+            finalRes.push_back(*res.begin());
+            auto address=res.find(*res.begin());
+            if(address != res.end())res.erase(address);
+        }
     
         
         return finalRes;
