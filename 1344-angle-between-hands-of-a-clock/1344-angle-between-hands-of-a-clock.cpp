@@ -2,7 +2,7 @@ class Solution {
 public:
     double angleClock(int hour, int minutes) {
         
-        float h=   double(hour%12 + (float)minutes/60)*30;
+        float h=   float(hour%12 + (float)minutes/60)*30;
         
         float m= minutes*6;
         
