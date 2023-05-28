@@ -36,12 +36,17 @@ public:
         for(int i=0;i<size;i++){
             angles.push_back(360+angles[i]);
         }
-        int ans = 0;
-        int start = 0;
-        for (int i = 0; i < angles.size(); i++) {
-            while (angles[i] - angles[start] > angle || angles[i]-angles[start]>=360) start++;
-            ans = max(ans, i - start + 1);
+        
+        //Sliding Window Part -->
+        int left=0,right=0;
+        int maxLen=0;
+        while(right<angles.size()){
+            
+            while(angles[right]-angles[left]>angle or angles[right]-angles[left]>=360)left++;
+            maxLen=max(maxLen,right-left+1);
+            right++;
         }
-        return res + ans;
+        
+        return maxLen + res;
     }
 };
