@@ -13,13 +13,13 @@ public:
         int ans=0;
         if(freq==0){
             
-            if(nums[indx]==1)ans= dfs(nums,indx+1,1);
-            else if(nums[indx]==0)ans= dfs(nums,indx+1,0);
+            if(nums[indx]==1)ans+= dfs(nums,indx+1,1);
+            else if(nums[indx]==0)ans+= dfs(nums,indx+1,0);
         }
         else if(freq==1){
             
-            if(nums[indx]==0)ans= ( dfs(nums,indx+1,0) + dfs(nums,indx+1,1))%mod;
-            else if(nums[indx]==1)ans= dfs(nums,indx+1,1);
+            if(nums[indx]==0)ans= (ans + dfs(nums,indx+1,0) + dfs(nums,indx+1,1))%mod;
+            else if(nums[indx]==1)ans+= dfs(nums,indx+1,1);
         }
         
         return dp[indx][freq]= ans;
