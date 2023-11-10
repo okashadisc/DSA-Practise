@@ -1,11 +1,11 @@
 class Solution {
 public:
-    vector<int> nsl;
-    vector<int> nsr;
+    vector<long long int> nsl;
+    vector<long long int> nsr;
     
     void nextSmallerToRight(vector<int> &nums,int n){
         
-        stack<int> s;
+        stack<long long int> s;
         for(int i=0;i<n;i++){
             
             while(!s.empty() and nums[i]<nums[s.top()]){
@@ -20,7 +20,7 @@ public:
     }
     void nextSmallerToLeft(vector<int> &nums,int n){
         
-        stack<int> s;
+        stack<long long int> s;
         for(int i=0;i<n;i++){
             
             while(!s.empty() and nums[i]<nums[s.top()]){
@@ -48,7 +48,7 @@ public:
             if(nsr[i]==(-1))nsr[i]= n;
         }
         
-        int maxArea= INT_MIN;
+        long long int maxArea= INT_MIN;
         for(int i=0;i<n;i++){
             
             if(nsl[i]<k and nsr[i]>k){
