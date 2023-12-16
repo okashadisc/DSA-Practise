@@ -52,7 +52,6 @@ public:
         ans=max(include,exclude);
         
         cout<<indx<<"-->"<<include<<"-->"<<exclude<<endl;
-        // cout<<ans<<endl;
         
         return dp[indx]= ans;
     }
@@ -64,12 +63,5 @@ public:
         dp.resize(n+1,-1);
         return dfs(0,pairs);
         
-//         int mx= INT_MIN;
-//         for(int i=0;i<=n;i++){
-            
-//             mx=max(mx,dp[i]);
-//         }
-        
-        // return mx;
     }
 };
