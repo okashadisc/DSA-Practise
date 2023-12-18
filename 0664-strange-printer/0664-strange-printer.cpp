@@ -29,7 +29,7 @@ public:
         }
         
         
-        return dp[tmpl][right]= ans;
+        return dp[left][right]= ans;
     }
     int strangePrinter(string s) {
         int n= s.length();
