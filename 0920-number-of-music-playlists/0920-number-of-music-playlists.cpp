@@ -1,6 +1,6 @@
 class Solution {
 public:
-    long long mod= 1e9 + 7;
+    const int mod= 1e9 + 7;
     vector<vector<long long>> dp;
     long long dfs(int goal,int unique,int n,int k){
         
