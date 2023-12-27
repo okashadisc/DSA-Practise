@@ -11,6 +11,7 @@
  */
 class Solution {
 public:
+    unordered_map<int,vector<TreeNode*>> dp;
     vector<TreeNode*> dfs(int n){
         
         //base case
@@ -25,6 +26,7 @@ public:
             return ans;
         }
         //recursive case
+        if(dp.find(n) != dp.end())return dp[n];
         
         for(int mid=2;mid<=n;mid+=2){
             
@@ -43,11 +45,12 @@ public:
                 }
             }
         }
+    
         
-        
-        return ans;
+        return dp[n]= ans;
     }
     vector<TreeNode*> allPossibleFBT(int n) {
+        
         
         return dfs(n);
     }
