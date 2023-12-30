@@ -21,7 +21,6 @@ public:
         }
         
         required= indx;
-        cout<<mask<<"-->"<<required<<endl;
         
         if(!ans.empty() and curr_ans.size()>=ans.size())return;
         
