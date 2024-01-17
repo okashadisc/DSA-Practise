@@ -21,7 +21,7 @@ public:
             long long area= min((long long)orders,diff*width);
             
             long long r= inventory[i];
-            long long l= r - area/(width);
+            long long l= r - (area/width);
             
             long long sum= (sumToN(r) - sumToN(l));
             long long profit= sum*width;
@@ -29,6 +29,7 @@ public:
             res+= profit;
             res%= mod;
             
+            // for remaining orders 
             profit= l*(area%width);
             res+= profit;
             res%= mod;
