@@ -12,7 +12,7 @@ public:
            nums.push_back({tasks[i][0],tasks[i][1],i});
         }
         sort(nums.begin(),nums.end());
-        long long currTime=nums[0][0];
+        long long currTime=1;
         
         vector<int> res;
         int i=0;
@@ -23,11 +23,12 @@ public:
                 q.push({nums[i][1],nums[i][2]});
                 i++;
             }
-                // if(!q.empty()){
+                if(!q.empty()){
                 auto val= q.top();
                 currTime+= val.first;
                 res.push_back(val.second);
                 q.pop();
+                }
 
             
             if(i<n and q.empty() and currTime< nums[i][0]){
