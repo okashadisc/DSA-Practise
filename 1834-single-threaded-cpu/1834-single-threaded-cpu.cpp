@@ -1,10 +1,10 @@
-// typedef pair<int,int> node;
+typedef pair<int,int> node;
 class Solution {
 public:
     vector<int> getOrder(vector<vector<int>>& tasks) {
         int n= tasks.size();
         
-        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>q;
+        priority_queue<node,vector<node>,greater<node>>q;
         
         vector<vector<int>> nums;
         for(int i=0;i<n;i++){
