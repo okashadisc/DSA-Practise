@@ -1,17 +1,17 @@
-// typedef pair<long long,int> node;
-bool comp(vector<int> &a,vector<int> &b){
+typedef pair<long long,int> node;
+class Solution {
+public:
+    static bool comp(vector<int> &a,vector<int> &b){
         
         return  a[0]<b[0];
     }
-class Solution {
-public:
     int mostBooked(int n, vector<vector<int>>& meetings) {
         
         
         // Early startTime and Early endTime
         sort(meetings.begin(),meetings.end(),comp);
         
-        priority_queue<pair<long long,int>,vector<pair<long long,int>>,greater<pair<long long,int>>> q;
+        priority_queue<node,vector<node>,greater<node>> q;
         priority_queue<int,vector<int>,greater<int>> unused;
         unordered_map<int,int> freq;
         
