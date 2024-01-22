@@ -17,10 +17,10 @@ public:
         
         for(int i=0;i<n;i++)unused.push(i);
         
-        for(auto x: meetings){
+        for(int i=0;i<meetings.size();i++){
             
-            int start= x[0];
-            int end= x[1];
+            int start= meetings[i][0];
+            int end= meetings[i][1];
             
             // Enqueue all the meetings that can be attended
             
