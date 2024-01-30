@@ -9,14 +9,14 @@ public:
         
         sort(clips.begin(),clips.end(),comp);
         
-        int prevEnd=0;
+        int prevEnd=0, maxEnd=0;
         long long count=0;
         
         for(int i=0;i<n;){
             
             if(clips[i][0]>prevEnd)return (-1);
             
-            int maxEnd= prevEnd;
+            maxEnd= prevEnd;
             while(i<n and clips[i][0]<=prevEnd){
                 
                 // We will keep going, while we can
