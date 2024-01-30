@@ -1,13 +1,13 @@
 class Solution {
 public:
-    static bool comp(vector<int> &a,vector<int> &b){
+//     static bool comp(vector<int> &a,vector<int> &b){
         
-        return a[0]<b[0];
-    }
+//         return a[0]<b[0];
+//     }
     int videoStitching(vector<vector<int>>& clips, int time) {
         int n= clips.size();
         
-        sort(clips.begin(),clips.end(),comp);
+        sort(clips.begin(),clips.end());
         
         int prevEnd=0;
         long long count=0;
