@@ -16,6 +16,7 @@ public:
             
             if(clips[i][0]>prevEnd)return (-1);
             
+            maxEnd= prevEnd;
             while(i<n and clips[i][0]<=prevEnd){
                 
                 // We will keep going, while we can
