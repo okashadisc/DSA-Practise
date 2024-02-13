@@ -18,7 +18,7 @@ public:
         for(int i=0;i<n;i++){
             
             dp[i]= cuboids[i][2];
-            for(int j=0;j<i;j++){
+            for(int j=i-1;j>=0;j--){
                 
                 if(cuboids[j][0]<=cuboids[i][0] and cuboids[j][1]<=cuboids[i][1] and cuboids[j][2]<=cuboids[i][2]){
                     
