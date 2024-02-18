@@ -63,14 +63,11 @@ public:
         int mx= INT_MIN;
         for(auto i:freq){
             
-            mx=max(mx,i.second);
-        }
-        
-        if(mx==INT_MIN)return (-1);
-        
-        for(auto i:freq){
-            
-            if(i.second==mx)res= i.first;
+            if(i.second>=mx){
+                
+                res= i.first;
+                mx= i.second;
+            }
         }
         
         return res;
