@@ -10,7 +10,7 @@ public:
             
             for(int j=1;j<=m;j++){
                 
-                dp[i][j]= (dp[i][j-1] + dp[i-1][j] + grid[i-1][j-1]) - dp[i-1][j-1]; 
+                dp[i][j]= (dp[i][j-1] + dp[i-1][j] - dp[i-1][j-1]) + grid[i-1][j-1]; 
             }
         }
         
