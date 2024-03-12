@@ -70,10 +70,6 @@ public:
             }
         }
         
-        for(auto i:dist){
-            
-            cout<<i.first<<"-->"<<i.second<<endl;
-        }
         return dp[1];
     }
 };
