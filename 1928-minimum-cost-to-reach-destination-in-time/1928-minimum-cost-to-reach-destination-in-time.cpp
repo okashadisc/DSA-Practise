@@ -16,7 +16,7 @@ public:
         
         makeGraph(edges);
         
-        multiset<pair<int,node>> st;
+        set<pair<int,node>> st;
         unordered_map<int,int> dist;
         vector<int> dp(n,INT_MAX);
         
