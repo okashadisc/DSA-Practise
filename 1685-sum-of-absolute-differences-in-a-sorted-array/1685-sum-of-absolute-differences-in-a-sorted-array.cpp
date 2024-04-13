@@ -11,7 +11,6 @@ public:
             prefixSum.push_back(prefixSum.back() + nums[i]);
         }
         
-        for(int i=0;i<n;i++)cout<<prefixSum[i]<<" "<<endl;
         vector<int> res(n,0);
         
         for(int i=0;i<n;i++){
