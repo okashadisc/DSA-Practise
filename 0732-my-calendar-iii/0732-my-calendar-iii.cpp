@@ -35,12 +35,12 @@ class SegmentTree {
     
     void up(int left,int right,int val){
         
-        updateRangeQuery(root,1,n,left,right,1);
+        updateRangeQuery(root,0,n,left,right,1);
     }
     
     int query(int left,int right){
         
-        return rangeSumQuery(root,1,n,left,right);
+        return rangeSumQuery(root,0,n,left,right);
     }
     
     void updateRangeQuery(Node* root,int start,int end,int left,int right,int val){
