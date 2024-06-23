@@ -17,12 +17,14 @@ public:
         
         if(flag==0){
             
-            // long long option1= nums[indx] + dfs(indx-1,0,nums);
-            // long long option2= nums[indx] + dfs(indx-1,1,nums);
+            long long option1= nums[indx] + dfs(indx-1,0,nums);
+            long long option2= nums[indx] + dfs(indx-1,1,nums);
             
-            ans=max(ans,nums[indx] + dfs(indx-1,0,nums));
+//             ans=max(ans,nums[indx] + dfs(indx-1,0,nums));
             
-            ans=max(ans,nums[indx] + dfs(indx-1,1,nums));
+//             ans=max(ans,nums[indx] + dfs(indx-1,1,nums));
+            
+            ans=max(option1,option2);
         }else{
             
             ans=max(ans,-nums[indx]+dfs(indx-1,0,nums));
