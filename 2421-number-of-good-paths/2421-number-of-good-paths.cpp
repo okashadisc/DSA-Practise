@@ -86,7 +86,6 @@ public:
             
             sort(leaders.begin(),leaders.end());
             
-            for(int i=0;i<leaders.size();i++)cout<<leaders[i]<<" ";
             cout<<endl;
             
             int count=1;
