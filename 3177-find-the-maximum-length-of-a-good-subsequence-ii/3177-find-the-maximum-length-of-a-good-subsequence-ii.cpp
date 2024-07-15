@@ -22,7 +22,7 @@ public:
         int ans=0;
         
         if(nextIndx<duplicate[nums[indx]].size())ans=max(ans,1 + dfs(duplicate[nums[indx]][nextIndx],alternateParity,nums,k,1));
-        else ans=max(ans,1 + dfs(n,alternateParity,nums,k,1));
+        else ans=max(ans,1 + dfs(n,alternateParity,nums,k,0));
         
         if(alternateParity<k)ans=max(ans,1 + dfs(indx+1,alternateParity+1,nums,k,0));
         
