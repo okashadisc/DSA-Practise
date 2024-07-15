@@ -38,7 +38,7 @@ public:
         
         for(int i=0;i<n;i++)duplicate[nums[i]].push_back(i);
         
-        dp.resize(n,vector<vector<int>>(k+1,vector<int>(2,-1)));
+        dp.resize(n,vector<vector<int>>(51,vector<int>(2,-1)));
         return dfs(0,0,nums,k,0);
     }
 };
