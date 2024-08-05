@@ -19,9 +19,8 @@ public:
                 st.insert(cards[right]);
                 valid+=1;
             }
+        
             
-            
-           // cout<<left<<"-->"<<right<<endl;
             while(valid==1 and st.size()){
                 
                 minLen=min(minLen,right-left+1);
@@ -34,16 +33,11 @@ public:
                 
                 if(!window[cards[left]]){
                     
-                   // if(st.count(cards[left])){
-                   //     valid-=1;
-                   // }
                     window.erase(cards[left]);
                 }
                 
                 left++;
             }
-            // for(int i=left;i<=right;i++)cout<<cards[i]<<" ";
-            // cout<<endl;
             
             right++;
         }
