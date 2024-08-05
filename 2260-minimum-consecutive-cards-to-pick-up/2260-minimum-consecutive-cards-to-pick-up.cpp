@@ -34,10 +34,9 @@ public:
                 
                 if(!window[cards[left]]){
                     
-                   if(st.count(cards[left])){
-                       valid-=1;
-                       // st.erase(st.find(cards[left]));
-                   }
+                   // if(st.count(cards[left])){
+                   //     valid-=1;
+                   // }
                     window.erase(cards[left]);
                 }
                 
