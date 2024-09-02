@@ -48,9 +48,9 @@ public:
         
         sort(temp.begin(),temp.end());
         
-        unordered_map<int,int> sol;
+        unordered_map<int,long long> sol;
         
-        int count=0;
+        long long count=0;
         int i=0;
         
         for(int j=0;i<temp.size() and j<path.size();){
