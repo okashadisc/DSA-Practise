@@ -48,7 +48,7 @@ public:
         
         sort(temp.begin(),temp.end());
         
-        map<int,int> sol;
+        unordered_map<int,int> sol;
         
         int count=0;
         int i=0;
