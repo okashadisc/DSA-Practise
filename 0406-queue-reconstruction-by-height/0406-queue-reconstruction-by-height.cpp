@@ -21,11 +21,11 @@ public:
                  if(count==requiredCount and output[j][0]==(-1)){
                     output[j][0]=people[i][0];
                     output[j][1]=people[i][1];
-                     break;
+                    break;
                 }
                 
                 if(output[j][0]==(-1))count++;
-                else if(output[j][0]==requiredHeight)count++;
+                else if(output[j][0]>=requiredHeight)count++;
                 
                
             }
